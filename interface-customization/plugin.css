@@ -1,0 +1,24 @@
+.nightshift-compact-toggle {
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  padding: 0;
+  font: 600 11px var(--font, sans-serif);
+  letter-spacing: -0.04em;
+}
+
+.nightshift-compact-toggle[aria-pressed="true"] {
+  border-color: #657750;
+  color: var(--lime, #bed68b);
+}
+
+body.nightshift-compact .topbar { height: 42px; min-height: 42px; }
+body.nightshift-compact .tabbar { min-height: 36px; }
+body.nightshift-compact .toolbar { min-height: 42px; }
+body.nightshift-compact .side-rail { width: 50px; padding: 6px 2px; }
+body.nightshift-compact .side-rail .side-tab { width: 45px; min-height: 47px; margin-bottom: 2px; }
+body.nightshift-compact .internal-page { padding: clamp(18px, 3.5vw, 40px); }
+
+@media (max-width: 768px), (pointer: coarse) and (max-width: 1024px) {
+  body.nightshift-compact .topbar { height: 44px; min-height: 44px; }
+}

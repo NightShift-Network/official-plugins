@@ -1,0 +1,5 @@
+/* The plugin marks only selected ad elements; keep hiding scoped to those marks. */
+[data-nightshift-adblock="true"] {
+  display: none !important;
+  visibility: hidden !important;
+}
