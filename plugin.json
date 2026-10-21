@@ -1,8 +1,4 @@
 {
-  "id": "nightshift-ad-blocker",
-  "name": "NightShift Ad Blocker",
-  "description": "Conservatively hides common ad embeds and clearly labeled ad containers in accessible proxied pages. It cannot filter network requests or reliably reach cross-origin frames.",
-  "version": "1.0.0",
-  "script": "plugin.js",
-  "styles": ["plugin.css"]
+  "name": "Official NightShift Plugin Store",
+  "plugins": ["ad-blocker", "interface-customization"]
 }

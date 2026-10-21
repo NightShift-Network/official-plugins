@@ -1,15 +1,15 @@
 # Official NightShift Plugin Store
 
-This store contains two separately manifested plugins:
+This store uses an indexed layout. The root `plugin.json` names the store and lists each plugin directory in its `plugins` array. Each listed directory contains its own `plugin.json` and the assets declared by that manifest.
 
-- **NightShift Ad Blocker** — the plugin described by the root `plugin.json`; its script and stylesheet are at the store root.
-- **NightShift Interface Customization** — its manifest and assets are in `interface-customization/`.
+## Plugins
 
-## Current NightShift loader limitation
+- **NightShift Ad Blocker** — `ad-blocker/`
+- **NightShift Interface Customization** — `interface-customization/`
 
-The current loader scans each configured store directory for exactly one root `plugin.json`. It does not scan subdirectories or read a store-level plugin list. As a result, the ad blocker is discovered and can be enabled or disabled at `nightshift://plugins`; the interface customization plugin is present in this store but is not discovered, shown in that page, or loaded. Its nested manifest is kept ready for a future loader that supports multiple plugins per store.
+## Adding a plugin
 
-Making both plugins active from this one store requires a NightShift source change to discover and validate nested plugin manifests. This store does not modify NightShift source or setup configuration.
+Create a direct child directory with a safe, descriptive name, then place the plugin's `plugin.json`, script, stylesheet, and any other assets inside it. Add that directory name to the root index's `plugins` array. Keep manifest asset paths relative to the plugin directory. Do not add hidden directories, nested paths, or folders that do not contain plugins to the index.
 
 ## Ad blocker behavior and limits
 
@@ -17,4 +17,4 @@ The ad blocker applies conservative cosmetic filtering in accessible proxied pag
 
 It does not cancel requests or filter scripts, and matching content may have downloaded before being hidden. It cannot reliably inspect cross-origin frames. First-party ads, video ads, sponsored search results, and ads without recognizable markup may remain. Narrow selectors can still hide ordinary content if a site uses one of those ad labels. Disable the ad blocker at `nightshift://plugins` if a page layout is affected; reload to apply the change.
 
-See [AD-BLOCKER.md](AD-BLOCKER.md) and [interface-customization/README.md](interface-customization/README.md) for plugin details.
+See [ad-blocker/AD-BLOCKER.md](ad-blocker/AD-BLOCKER.md) and [interface-customization/README.md](interface-customization/README.md) for plugin details.
