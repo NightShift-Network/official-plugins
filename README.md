@@ -7,6 +7,8 @@ This store uses an indexed layout. The root `plugin.json` names the store and li
 - **NightShift Ad Blocker** — `ad-blocker/`
 - **NightShift Interface Customization** — `interface-customization/`
 
+Interface Customization adds a compact layout toggle and a color theme selector in the plugin's Settings panel at `nightshift://plugins`.
+
 ## Adding a plugin
 
 Create a direct child directory with a safe, descriptive name, then place the plugin's `plugin.json`, script, stylesheet, and any other assets inside it. Add that directory name to the root index's `plugins` array. Keep manifest asset paths relative to the plugin directory. Do not add hidden directories, nested paths, or folders that do not contain plugins to the index.

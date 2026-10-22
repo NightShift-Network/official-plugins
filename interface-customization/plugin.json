@@ -1,8 +1,9 @@
 {
   "id": "nightshift-interface-customization",
   "name": "NightShift Interface Customization",
-  "description": "Adds a compact layout toggle to the NightShift header and remembers your choice on this device.",
+  "description": "Adds a compact layout toggle and color theme selector, with preferences saved on this device.",
   "version": "1.0.0",
+  "settings": true,
   "script": "plugin.js",
   "styles": ["plugin.css"]
 }
